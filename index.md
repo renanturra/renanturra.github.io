@@ -1,10 +1,8 @@
-Renan Turra
-===
+# **Renan Turra**
 _(431) 998-3101 ▪ renan.turra@gmail.com_  
 _Winnipeg, MB_  
 
-Technical Skills
-===
+## Technical Skills
 ---
 **Technologies & Frameworks**  
 Vue.js ▪ Node.js ▪ React.js / React Native ▪ Express.js ▪ jQuery.js ▪ ASP.NET ▪ HTML ▪ CSS / SASS  
@@ -25,8 +23,7 @@ Agile ▪  Jira ▪ GitHub ▪ Gitlab ▪ Bitbucket
 Windows ▪ Linux ▪ macOS ▪ iOS ▪ Android  
 
 
-Education
-===
+## Education
 ---
 **B. Sc. Bachelor of Science, Major in Computer Science (Co-op)** | _2016 - Present_  
 _University of Manitoba • Winnipeg MB_  
@@ -37,8 +34,7 @@ _Expected Date of Graduation: December 2020_
 _FADEP Faculdade de Pato Branco • Pato Branco PR, Brazil_
   
   
-Work Experience
-===
+## Work Experience
 ---
 ### **System Developer** | _Payworks • Winnipeg MB_  
 **Co-op Work Term 3**  | _June 2020 - August 2020_  
@@ -60,8 +56,7 @@ Work Experience
 - Effectively addressed several bugs and refactored code to improve readability and running time.  
 
 
-Academic Projects
-===
+## Academic Projects
 ---
 ### **Tripmate**  
 **Software Engineering 2** | _Winter 2020_  
