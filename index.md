@@ -1,5 +1,3 @@
-# **Renan Turra**
-
 ## Technical Skills
 ---
 **Technologies & Frameworks**  
