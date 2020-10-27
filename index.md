@@ -1,6 +1,3 @@
-_(431) 998-3101 ▪ renan.turra@gmail.com_  
-_Winnipeg, MB_  
-
 ## Technical Skills
 ---
 **Technologies & Frameworks**  
