@@ -1,4 +1,3 @@
-# **Renan Turra**
 _(431) 998-3101 ▪ renan.turra@gmail.com_  
 _Winnipeg, MB_  
 
