@@ -89,6 +89,8 @@ If you need a quick way to edit and visualize your markdown documents, you can a
 
 **Author:** [Renan Desconsi Turra](https://renanturra.github.io)
 
+**Group members:** Adam, Jaspreet, Tuan
+
 **Template author:** [Steve Smith](https://github.com/orderedlist)  
 
 **Reference:** [Modern Technical Writing, by Andrew Etter](https://www.amazon.ca/Modern-Technical-Writing-Introduction-Documentation-ebook/dp/B01A2QL9SS)
