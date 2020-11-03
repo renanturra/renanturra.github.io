@@ -49,7 +49,7 @@ Now that you have an account, we need to create your first repository. To do tha
 
 When you use the _username.github.io_ special naming, you are telling GitHub to create a static page using Jekyll. You can learn more about this tool by accessing [Jekyll website](https://jekyllrb.com).  
 
-> Static pages are a simple pages that will always be the same for everyone that access it. According to Etter, the advantages of static pages over dinamically generated pages are given since they "have no server-side application dependencies, no databases, and nothing to install, so migrating the entire site is as easy as moving a directory". To put it in another way, having a website using static pages means that you don't need to worry about all the complexity that hosting a website involves.  
+> Static pages are a simple pages that will always be the same for everyone that access it. According to Etter, the advantages of static pages over dinamically generated pages  are given since they "have no server-side application dependencies, no databases, and nothing to install, so migrating the entire site is as easy as moving a directory". To put it in another way, having a website using static pages means that you don't need to worry about all the complexity that hosting a website involves.  
 
 **3. Create a file called `index.md` to your new repository, and add your resume to the file**  
 Now that we have our repository, we need to create a new file. On your newly created repository:  
@@ -69,7 +69,7 @@ Your resume hosted on GitHub Pages is already up and running, but we need to add
 - Find the theme that best suits you and click `Select theme`  
 
 Done! Now you have a shiny new resume hosted on GitHub Pages.  
-In the following image, you can see how we went from PDF to raw markdown, to how our markdown looks like, and finally the website hosted on GitHub Pages.  
+In the following image, you can see how we went from raw markdown to a preview, and finally the website hosted on GitHub Pages.  
 
 ![resume-gif](images/resume.gif)
 
