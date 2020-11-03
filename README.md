@@ -1,4 +1,4 @@
-# Hosting a Resume on GitHub
+# Hosting a Resume on GitHub Pages
 
 ## Summary
 
@@ -19,7 +19,7 @@ By the end of this tutorial, you will have your resume hosted by GitHub and you 
 
 ## Prerequisites
 
-The only prerequisite for hosting your resume on GitHub Pages is a resume formatted in markdown. If you are not familiar with markdown, you can learn more at the [more resources](#more-resources) section.  
+The only prerequisite for hosting your resume on GitHub Pages is a resume formatted in markdown. If you are not familiar with markdown, you can learn more in the [more resources](#more-resources) section.  
 
 
 ## Instructions
@@ -35,14 +35,17 @@ At the end of this steps, you will be able to access and share your website!
 
 ### Steps
 **1. Creating a GitHub account**  <TODO>  
-To host a page on GitHub Pages, you will need a GitHub account. Access [GitHub](https://github.com/) and sign up for a new account. Being a Distributed Version Control system, GitHub keeps track of all the changes that are made in the files, keeping them saved with their respective version. Besides that, Etter affirms that keeping documentation together with the code is important to keep "documentation and code branches to stay in sync" 
+To host a page on GitHub Pages, you will need a GitHub account. 
+- Access [GitHub](https://github.com/) and sign up for a new account.  
+
+Being a Distributed Version Control System, GitHub keeps track of all the diferent versions of the same file. This is a fundamental tool to modern software development, since we have hundreds of developers working together in the same project. To maintain control of all the concurrent changes that might happen, Etter affirms that the software and its documentation must be tightly integrated as it is very important to keep "documentation and code branches to stay in sync".  
 
 **2. Create a new repository called _username.github.io_**  
 Now that you have an account, we need to create your first repository. To do that, you should:  
-    - Click on the `+` sign at the top right of the page  
-    - Click on `New repository`  
-    - Under `Repository name`, add _username.github.io_, where _username_ will be your GitHub user  
-    - Click `Create repository` 
+- Click on the `+` sign at the top right of the page  
+- Click on `New repository`  
+- Under `Repository name`, add _username.github.io_, where _username_ will be your GitHub user  
+- Click `Create repository` 
 
 When you use the _username.github.io_ special naming, you are telling GitHub to create a static page using Jekyll. You can learn more about this tool by accessing [Jekyll website](https://jekyllrb.com).  
 
@@ -50,20 +53,20 @@ Static pages are a simple pages that will always be the same for everyone that a
 
 **3. Create a file called `index.md` to your new repository, and add your resume to the file**  
 Now that we have our repository, we need to create a new file. On your newly created repository:  
-    - Click `Add File` and select `Create new file`  
-    - Inside the input box that reads `Name your file...`, write `index.md`  
-    - Copy all the contents of your mardown formatted resume  
-    - Under `Edit new file`, paste the contents of your resume  
-    - Click `Commit new file` at the bottom of the page  
+- Click `Add File` and select `Create new file`  
+- Inside the input box that reads `Name your file...`, write `index.md`  
+- Copy all the contents of your mardown formatted resume  
+- Under `Edit new file`, paste the contents of your resume  
+- Click `Commit new file` at the bottom of the page  
 
 Your resume is already being hosted by GitHub Pages. You can access it already by opening your browser and typing _username.github.io_. Under the hood, when you create a file called `index.md`, GitHub understands that this is the main page of your static website. Then, it takes the markdown file (the `.md` extension) and converts to a website format. According to Etter, light markup languages are perfect to reduce the complexity of big files into something more accessible, that can be easily changed.  
 
 **4. Select a theme for your new resume**  
 Your resume hosted on GitHub Pages is already up and running, but we need to add some styling to it  
-    - In your repository, click on `Settings` on the upper tab  
-    - Scroll down to the section called `GitHub Pages`  
-    - Click on `Change theme`  
-    - Find the theme that best suits you and click `Select theme`  
+- In your repository, click on `Settings` on the upper tab  
+- Scroll down to the section called `GitHub Pages`  
+- Click on `Change theme`  
+- Find the theme that best suits you and click `Select theme`  
 
 Done! Now you have a new shiny resume hosted on GitHub Pages.  
 
@@ -97,14 +100,3 @@ There are a few issues that might happen when you try to host your resume. You s
 - Make sure your resume is properly formatted in markdown and named as `index.md`.
 - Check if our respository was created correctly, using the _username.github.io_ format.
 - Right after adding new files or even making changes to existing ones, GitHub takes sometime to compile and build those changes. If that is the case, you can try accessing your website again in a minute or two.
-
-
-## Audience Analysis
-
-**Audience:** Computer Science Student  
-**Venue:** README in GitHub Pages  
-**Purpose:** Explain how to host a resume on GitHub Pages  
-**Additional Purpose:** Introduce a demo principles of Andrew Etter's book _Modern Technical Writing_  
-**Desired Reaction:** Encourage reader to create their own resume hosted by GitHub Pages  
-**Vocabulary:** Informal, but familiar to what a software developer is used to  
-**Tone:** Objective
