@@ -34,7 +34,7 @@ The steps that you need to follow are very straightforward. First, we will take 
 At the end of this steps, you will be able to access and share your website!  
 
 ### Steps
-**1. Creating a GitHub account**  <TODO>  
+**1. Creating a GitHub account** 
 To host a page on GitHub Pages, you will need a GitHub account. 
 - Access [GitHub](https://github.com/) and sign up for a new account.  
 
@@ -69,6 +69,10 @@ Your resume hosted on GitHub Pages is already up and running, but we need to add
 - Find the theme that best suits you and click `Select theme`  
 
 Done! Now you have a shiny new resume hosted on GitHub Pages.  
+In the following image, you can see how we went from PDF to raw markdown, to how our markdown looks like, and finally the website hosted on GitHub Pages.  
+
+![resume-gif](images/resume.gif)
+
 
 ### More Resources
 **1. Markdown tutorial:**  
