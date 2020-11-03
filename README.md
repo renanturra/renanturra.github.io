@@ -38,7 +38,7 @@ At the end of this steps, you will be able to access and share your website!
 To host a page on GitHub Pages, you will need a GitHub account. 
 - Access [GitHub](https://github.com/) and sign up for a new account.  
 
-Being a Distributed Version Control System, GitHub keeps track of all the diferent versions of the same file. This is a fundamental tool to modern software development, since we have hundreds of developers working together in the same project. To maintain control of all the concurrent changes that might happen, Etter affirms that the software and its documentation must be tightly integrated as it is very important to keep "documentation and code branches to stay in sync".  
+> Being a Distributed Version Control System, GitHub keeps track of all the diferent versions of the same file. This is a fundamental tool to modern software development, since we have hundreds of developers working together in the same project. To maintain control of all the concurrent changes that might happen, Etter affirms that the software and its documentation must be tightly integrated as it is very important to keep "documentation and code branches to stay in sync".  
 
 **2. Create a new repository called _username.github.io_**  
 Now that you have an account, we need to create your first repository. To do that, you should:  
@@ -49,7 +49,7 @@ Now that you have an account, we need to create your first repository. To do tha
 
 When you use the _username.github.io_ special naming, you are telling GitHub to create a static page using Jekyll. You can learn more about this tool by accessing [Jekyll website](https://jekyllrb.com).  
 
-Static pages are a simple pages that will always be the same for everyone that access it. According to Etter, the advantages of static pages over dinamically generated pages are given since they "have no server-side application dependencies, no databases, and nothing to install, so migrating the entire site is as easy as moving a directory". To put it in another way, having a website using static pages means that you don't need to worry about all the complexity that hosting a website involves.  
+> Static pages are a simple pages that will always be the same for everyone that access it. According to Etter, the advantages of static pages over dinamically generated pages are given since they "have no server-side application dependencies, no databases, and nothing to install, so migrating the entire site is as easy as moving a directory". To put it in another way, having a website using static pages means that you don't need to worry about all the complexity that hosting a website involves.  
 
 **3. Create a file called `index.md` to your new repository, and add your resume to the file**  
 Now that we have our repository, we need to create a new file. On your newly created repository:  
@@ -59,7 +59,7 @@ Now that we have our repository, we need to create a new file. On your newly cre
 - Under `Edit new file`, paste the contents of your resume  
 - Click `Commit new file` at the bottom of the page  
 
-Your resume is already being hosted by GitHub Pages. You can access it already by opening your browser and typing _username.github.io_. Under the hood, when you create a file called `index.md`, GitHub understands that this is the main page of your static website. Then, it takes the markdown file (the `.md` extension) and converts to a website format. According to Etter, light markup languages are perfect to reduce the complexity of big files into something more accessible, that can be easily changed.  
+> Your resume is already being hosted by GitHub Pages. You can access it already by opening your browser and typing _username.github.io_. Under the hood, when you create a file called `index.md`, GitHub understands that this is the main page of your static website. Then, it takes the markdown file (the `.md` extension) and converts to a website format. According to Etter, light markup languages are perfect to reduce the complexity of big files into something more accessible, that can be easily changed.  
 
 **4. Select a theme for your new resume**  
 Your resume hosted on GitHub Pages is already up and running, but we need to add some styling to it  
@@ -97,7 +97,8 @@ If you need a quick way to edit and visualize your markdown documents, you can a
 ## FAQ
 
 ### 1. Why is markdown better than a word processor?  
-With markdown you can have a smaller file that is easier read and shared by humans. Additionally, these files are also read and shared by computers. Word processors are great for other tasks, but we should avoid it when writing documentation (such as this README). As stated by Etter, the main advantage of markdown is the "the natural separation of content and style, of HTML and CSS" it provides. When we work with markdown, we only need to worry about the content, leaving the style for later. 
+With markdown you can have a smaller file that is easier read and shared by humans. Additionally, these files are also read and shared by computers. Word processors are great for other tasks, but we should avoid it when writing documentation (such as this README). 
+> As stated by Etter, the main advantage of markdown is the "the natural separation of content and style, of HTML and CSS" it provides. When we work with markdown, we only need to worry about the content, leaving the style for later. 
 
 ### 2. Why is my resume not showing up?  
 There are a few issues that might happen when you try to host your resume. You should check the following things:
