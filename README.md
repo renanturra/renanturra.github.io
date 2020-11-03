@@ -68,7 +68,7 @@ Your resume hosted on GitHub Pages is already up and running, but we need to add
 - Click on `Change theme`  
 - Find the theme that best suits you and click `Select theme`  
 
-Done! Now you have a new shiny resume hosted on GitHub Pages.  
+Done! Now you have a shiny new resume hosted on GitHub Pages.  
 
 ### More Resources
 **1. Markdown tutorial:**  
