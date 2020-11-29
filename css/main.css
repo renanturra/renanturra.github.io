@@ -1927,7 +1927,7 @@ input::-moz-focus-inner {
   background-color: #02182c;
   background-repeat: no-repeat;
   background-position: top center;
-  background-image: url(../images/me.jpeg);
+  background-image: url(../images/me.jpg);
   background-size: cover;
   position: absolute;
   top: 20%;
@@ -2738,8 +2738,6 @@ input::-moz-focus-inner {
 }
 
 .masonry-wrap {
-  width: 89%;
-  max-width: 600px;
   margin-top: 11.2rem;
   margin-right: auto;
   margin-left: auto;
@@ -2747,18 +2745,17 @@ input::-moz-focus-inner {
 
 .masonry .grid-sizer,
 .masonry__brick {
-  width: 50%;
+  width: 100%;
 }
 
 .masonry__brick {
   float: left;
-  padding: 0 30px;
   margin-bottom: 60px;
 }
 
 .item-folio {
   text-align: center;
-  padding: 60px;
+  padding: 30px;
   background-color: #EFEFEF;
   transition: all 0.5s ease-in-out;
 }
@@ -2854,12 +2851,6 @@ input::-moz-focus-inner {
   margin-top: 8.92%;
 }
 
-.item-folio__text,
-.item-folio__title,
-.item-folio__cat {
-  display: inline-block;
-}
-
 .item-folio__title,
 .item-folio__cat {
   font-family: "Roboto", sans-serif;
@@ -2880,7 +2871,6 @@ input::-moz-focus-inner {
 }
 
 .item-folio__cat::before {
-  content: "-";
   margin: 0 .4rem;
 }
 
@@ -2894,7 +2884,6 @@ input::-moz-focus-inner {
  * ------------------------------------------------------------------- */
 @media screen and (max-width:1200px) {
   .masonry__brick {
-    padding: 0 24px;
     margin-bottom: 48px;
   }
 
@@ -2921,7 +2910,6 @@ input::-moz-focus-inner {
 
 @media screen and (max-width:1024px) {
   .masonry__brick {
-    padding: 0 20px;
     margin-bottom: 40px;
   }
 
@@ -2933,7 +2921,6 @@ input::-moz-focus-inner {
 
 @media screen and (max-width:900px) {
   .masonry__brick {
-    padding: 0 16px;
     margin-bottom: 32px;
   }
 
@@ -2949,7 +2936,9 @@ input::-moz-focus-inner {
   }
 
   .masonry-wrap {
-    margin-top: 7.2rem;
+    width: auto;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 
   .masonry .grid-sizer,
@@ -3276,7 +3265,7 @@ input::-moz-focus-inner {
  * ------------------------------------------------------------------- */
 .s-contact {
   padding-top: 18.4rem;
-  padding-bottom: 6.4rem;
+  padding-bottom: 18.4rem;
   background-color: #02041e;
 }
 
@@ -3604,7 +3593,44 @@ footer a:focus {
 
 }
 
+/* =========================================
+*
+*
+* ==========================================
+*/
 
+/* Float four columns side by side */
+.projects .column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.projects .row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.projects .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .projects .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
 
 /* ===================================================================
  * # IE10/IE11 Specific
