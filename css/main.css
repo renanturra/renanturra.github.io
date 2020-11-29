@@ -3301,9 +3301,8 @@ input::-moz-focus-inner {
 }
 
 .contact-infos {
-  margin-top: 12.8rem;
-  font-family: "Frank Ruhl Libre", serif;
-  font-weight: 400;
+  font-family: "Courier New", sans-serif;
+  font-weight: 200;
   font-size: 4.2rem;
   line-height: 1.333;
 }
@@ -3336,8 +3335,6 @@ input::-moz-focus-inner {
   list-style: none;
   margin-left: 0;
   display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
   -webkit-flex-flow: row wrap;
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
@@ -3348,10 +3345,10 @@ input::-moz-focus-inner {
 }
 
 .contact-social ul li::before {
-  content: "/";
   color: #ffffff;
   margin-left: 4px;
   margin-right: 4px;
+  font-size: 3.5rem;
 }
 
 .contact-social ul li:first-child::before {
@@ -3457,6 +3454,9 @@ footer {
 footer a,
 footer a:visited {
   color: #ffffff;
+}
+footer a:focus {
+  color: #1DD4FF;
 }
 
 /* ------------------------------------------------------------------- 
