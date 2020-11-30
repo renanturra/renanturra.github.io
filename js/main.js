@@ -133,12 +133,13 @@
         
         var containerBricks = $('.masonry');
 
-        containerBricks.imagesLoaded(function () {
-            containerBricks.masonry({
-                itemSelector: '.masonry__brick',
-                resize: true
-            });
+        containerBricks.masonry({
+            itemSelector: '.masonry-brick',
+            columnWidth: '.grid-sizer',
+            percentPosition: true
         });
+
+        
 
     };
 
