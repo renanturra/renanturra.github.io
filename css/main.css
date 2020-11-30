@@ -2738,19 +2738,28 @@ input::-moz-focus-inner {
 }
 
 .masonry-wrap {
+  width: 89%;
+  max-width: 1400px;
   margin-top: 11.2rem;
   margin-right: auto;
   margin-left: auto;
 }
 
-.masonry .grid-sizer,
-.masonry__brick {
-  width: 100%;
+.grid-sizer,
+.masonry-brick {
+  width: 33%;
 }
 
-.masonry__brick {
+.masonry-brick {
   float: left;
+  height: 300px;
+  width: 32%;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 60px;
+  border: 20px solid white;
+  padding: 20px;
+  
 }
 
 .item-folio {
@@ -2765,6 +2774,9 @@ input::-moz-focus-inner {
 .item-folio__thumb {
   position: relative;
   overflow: hidden;
+  margin: auto;
+  width: 100%;
+  height: 100%;
 }
 
 .item-folio__thumb .thumb-link {
@@ -2883,7 +2895,7 @@ input::-moz-focus-inner {
  * works
  * ------------------------------------------------------------------- */
 @media screen and (max-width:1200px) {
-  .masonry__brick {
+  .masonry-brick {
     margin-bottom: 48px;
   }
 
@@ -2909,7 +2921,7 @@ input::-moz-focus-inner {
 }
 
 @media screen and (max-width:1024px) {
-  .masonry__brick {
+  .masonry-brick {
     margin-bottom: 40px;
   }
 
@@ -2920,7 +2932,7 @@ input::-moz-focus-inner {
 }
 
 @media screen and (max-width:900px) {
-  .masonry__brick {
+  .masonry-brick {
     margin-bottom: 32px;
   }
 
@@ -2942,17 +2954,18 @@ input::-moz-focus-inner {
   }
 
   .masonry .grid-sizer,
-  .masonry__brick {
+  .masonry-brick {
     width: 100%;
   }
 
-  .masonry__brick {
+  .masonry-brick {
     float: none;
     margin-bottom: 60px;
   }
 
   .item-folio {
     padding: 8.92% 8.92% 8.92%;
+    margin: auto;
   }
 
   .item-folio__thumb .thumb-link::after {
@@ -2979,13 +2992,13 @@ input::-moz-focus-inner {
     padding-right: 25px;
   }
 
-  .masonry__brick {
+  .masonry-brick {
     padding: 0 10px;
     margin-bottom: 44px;
   }
 
   .item-folio__thumb .thumb-link::after {
-    width: 3rem;
+    width: 3rem; 
     height: 3rem;
   }
 
@@ -3002,14 +3015,14 @@ input::-moz-focus-inner {
 }
 
 @media screen and (max-width:500px) {
-  .masonry__brick {
+  .masonry-brick {
     margin-bottom: 3.6rem;
   }
 
 }
 
 @media screen and (max-width:400px) {
-  .masonry__brick {
+  .masonry-brick {
     padding: 0;
     margin-bottom: 3.2rem;
   }
