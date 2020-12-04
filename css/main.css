@@ -2742,6 +2742,7 @@ input::-moz-focus-inner {
   margin-top: 11.2rem;
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: 25%;
 }
 
 .grid-sizer,
@@ -2752,7 +2753,6 @@ input::-moz-focus-inner {
 .masonry-brick {
   float: left;
   height: 300px;
-  width: 32%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 60px;
@@ -2871,7 +2871,7 @@ input::-moz-focus-inner {
   line-height: 2rem;
 }
 
-.item-folio__title {
+.item-folio__title > a {
   font-weight: 500;
   color: #02041e;
 }
@@ -2898,10 +2898,6 @@ input::-moz-focus-inner {
     margin-bottom: 48px;
   }
 
-  .item-folio {
-    padding: 48px;
-  }
-
   .item-folio__thumb .thumb-link::after {
     width: 3rem;
     height: 3rem;
@@ -2924,19 +2920,11 @@ input::-moz-focus-inner {
     margin-bottom: 40px;
   }
 
-  .item-folio {
-    padding: 40px;
-  }
-
 }
 
 @media screen and (max-width:900px) {
   .masonry-brick {
     margin-bottom: 32px;
-  }
-
-  .item-folio {
-    padding: 32px;
   }
 
 }
@@ -2954,7 +2942,8 @@ input::-moz-focus-inner {
 
   .masonry .grid-sizer,
   .masonry-brick {
-    width: 100%;
+    width: 40%;
+    position: initial !important;
   }
 
   .masonry-brick {
@@ -2984,6 +2973,19 @@ input::-moz-focus-inner {
 
 }
 
+@media screen and (max-width:700px) {
+  .masonry-wrap {
+    width: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .masonry-brick {
+    padding: 0 10px;
+    margin-bottom: 44px;
+    width: 45%;
+  }
+
 @media screen and (max-width:600px) {
   .masonry-wrap {
     width: auto;
@@ -2994,6 +2996,7 @@ input::-moz-focus-inner {
   .masonry-brick {
     padding: 0 10px;
     margin-bottom: 44px;
+    width: 60%;
   }
 
   .item-folio__thumb .thumb-link::after {
@@ -3016,6 +3019,7 @@ input::-moz-focus-inner {
 @media screen and (max-width:500px) {
   .masonry-brick {
     margin-bottom: 3.6rem;
+    width: 70%;
   }
 
 }
@@ -3024,6 +3028,7 @@ input::-moz-focus-inner {
   .masonry-brick {
     padding: 0;
     margin-bottom: 3.2rem;
+    width: 80%;
   }
 
 }
