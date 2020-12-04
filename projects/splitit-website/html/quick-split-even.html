@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Title -->
+        <title>Split.It</title>
+
+        <!-- Metas -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link href="../css/bootstrap.css" rel="stylesheet">
+        <link href="../css/main.css" rel="stylesheet">
+
+        <script src="../js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../js/scripts.js"></script>
+        <script src="../js/bootstrap.js"></script>
+
+        <!-- Styles -->
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Baloo+Bhaijaan|Quicksand');
+        </style>   
+    </head>
+
+    <body>
+        <!-- Header -->
+        <div id="header" class="header">
+
+            <!-- Left Side -->
+            <div id="leftHeader" class="leftHeader">
+                <a href="../index.html">
+                    <h1>Split.It</h1>
+                </a>
+            </div>
+            <!-- /Left Side -->
+
+            <!-- Right Side -->
+            <div id="rightHeader" class="rightHeader">
+                <form class="form-inline">
+                    <div class="container-fluid">
+                        <p>Login</p>
+
+                        <!-- Email Field-->
+                        <input id="loginEmail" class="form-control" type="email" placeholder="Email">  
+
+                        <!-- Password Field-->
+                        <input id="loginPassword" class="form-control" type="password" placeholder="Password">
+
+                        <!-- Sign In Button-->
+                        <a href="#">
+                            <span id="loginButton" class="glyphicon glyphicon-log-in" style="color: white;font-size: 20px"></span>
+                        </a>
+                    </div>
+                </form>            
+            </div>
+            <!-- /Right Side -->
+
+        </div>
+        <!-- /Header -->
+
+        <!-- Body -->
+        <div id="body" class="body">
+
+            <!-- Left Side -->
+            <div id="mainLeftSide" class="mainLeftSide">
+                <div class="container-fluid">
+                    <br><br><br><br>
+
+                    <p>Each member pays:  <br>$<input id="evenPassed" type="text" readonly> </p>
+
+                    <br><br><br><br>
+                    
+                    <a href="../index.html">
+                        <button class="button button-primary btn-lg" style="width: 30%;font-size: 25px">Reset</button>
+                    </a>
+                    
+                </div>
+            </div>
+            <!-- /Left Side -->
+
+            <!-- Right Side -->
+            <div id="mainRightSide" class="mainRightSide">
+                <form class="form-horizontal">
+                    <div class="container-fluid">
+                        <p>New User</p>
+
+                        <!-- Email Field-->
+                        <div class="col-sm">
+                            <label class="control-label col-sm-2" for="email"></label>
+                            <input type="email" class="form-control" id="email" placeholder="Email">
+                        </div>
+
+                        <!-- Password Field-->
+                        <div class="col-sm">
+                            <label class="control-label col-sm-2" for="pwd"></label>
+                            <input type="password" class="form-control" id="pwd" placeholder="Password">
+                        </div>
+
+                        <!-- Sign Up Button-->
+                        <button type="button" class="btn btn-secondary">Sign Up</button>
+                    </div>
+                </form>
+            </div>
+            <!-- /Right Side -->
+        </div>
+        <!-- /Body -->
+
+        <!-- Footer -->
+        <div id="footer" class="footer">
+            <hr>
+            <div class = "footrow">
+                <div class ="footcolumn">
+                    <p.foot>Questions, concerns or suggestions?</p.foot> <br>
+                    <p.foot>Contact us:
+                        <a href="mailto:split.it@gmail.com">split.it@gmail.com</a>
+                    </p.foot>
+                </div>
+                <div class ="footcolumn">
+                    <p.foot>Follow us and keep up to date by following our social medias</p.foot><br>
+
+                    <a href="https://twitter.com/">
+                        <img id = "icons" src="../images/twitter.png" alt="Twitter">
+                    </a>
+
+                    <a href="https://facebook.com/">
+                        <img id = "icons" src="../images/facebook.png" alt="Facebook">
+                    </a>
+
+                    <a href="https://instagram.com/">
+                        <img id = "icons" src="../images/instagram.png" alt="Instagram"> 
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+        <!-- Footer -->
+
+        <script>
+            //Get the number of the group from last page
+            var passedEven = localStorage.getItem("evenDiv");
+            document.getElementById("evenPassed").value = passedEven;
+        </script>
+
+    </body>
+</html>

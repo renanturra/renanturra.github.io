@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Title -->
+        <title>Split.It</title>
+
+        <!-- Metas -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <!-- boostrap.css and main.cc references  -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
+
+        <script src="js/jquery-3.3.1.slim.min.js"></script>
+        <script src="js/scripts.js"></script>
+        <script src="js/bootstrap.js"></script>
+
+
+        <!-- Styles -->
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Baloo+Bhaijaan|Quicksand');
+        </style> 
+        <!-- /Styles -->
+
+    </head>
+
+    <body>
+        <!-- Header -->
+        <div id="header" class="header">
+
+            <!-- Left Side -->
+            <div id="leftHeader" class="leftHeader">
+                <a href="../index.html">
+                    <h1>Split.It</h1>
+                </a>
+            </div>
+            <!-- /Left Side -->
+
+            <!-- Right Side -->
+            <div id="rightHeader" class="rightHeader">
+                <form class="form-inline">
+                    <div class="container-fluid">
+                        <p>Login</p>
+
+                        <!-- Email Field-->
+                        <input id="loginEmail" class="form-control" type="email" placeholder="Email">  
+
+                        <!-- Password Field-->
+                        <input id="loginPassword" class="form-control" type="password" placeholder="Password">
+
+                        <!-- Sign In Button-->
+                        <a href="#">
+                            <span id="loginButton" class="glyphicon glyphicon-log-in" style="color: white;font-size: 20px"></span>
+                        </a>
+                    </div>
+                </form>            
+            </div>
+            <!-- /Right Side -->
+
+        </div>
+        <!-- /Header -->
+
+        <!-- Body -->
+        <div id="body" class="body">
+
+            <!-- Left Side -->
+            <div id="mainLeftSide" class="mainLeftSide">
+                <div class="container-fluid">
+                    <!-- First Section -->
+                    <p>Split an expense with a group.<br>
+                        Figure out who owes what!
+
+                        <br><br><br><br>
+                        <!-- Second Section -->
+                        How many people are in your group?</p>
+                    <input id="groupNumber" type="number" name="usr" name="points" min="1" value="1" max="100" step="1" placeholder="1" style="width: inherit" oninput="validity.valid||(value='');">
+                    <br>
+
+                    <!-- Start Button -->
+                    <a href="#">
+                        <button id="startButton" type="button" class="btn btn-secondary" style="width: 30%;font-size: 25px">Start!</button><br>
+                    </a>
+                </div>
+            </div>
+            <!-- /Left Side -->
+
+            <!-- Right Side -->
+            <div id="mainRightSide" class="mainRightSide">
+                <form class="form-horizontal">
+                    <div class="container-fluid">
+
+                        <!-- Title -->
+                        <div class="col-md">
+                            <p>New User</p>
+                        </div>
+
+                        <!-- Email Field-->
+                        <div class="col-md">
+                            <label class="control-label col-sm-1" for="email"></label>
+                            <input type="email" class="form-control" id="email" placeholder="Email">
+                        </div>
+
+                        <!-- Password Field-->
+                        <div class="col-md">
+                            <label class="control-label col-sm-1" for="pwd"></label>
+                            <input type="password" class="form-control" id="pwd" placeholder="Password">
+                        </div>
+
+                        <!-- Sign Up Button-->
+                        <div class="col-md">
+                            <button type="button" class="btn btn-secondary">Sign Up</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- /Right Side -->
+
+        </div>
+        <!-- /Body -->
+
+        <!-- Footer -->
+        <div id="footer" class="footer">
+            <hr>
+            <div class = "footrow">
+                <div class ="footcolumn">
+                    <p.foot>Questions, concerns or suggestions?</p.foot> <br>
+                    <p.foot>Contact us:
+                        <a href="mailto:split.it@gmail.com">split.it@gmail.com</a>
+                    </p.foot>
+                </div>
+                <div class ="footcolumn">
+                    <p.foot>Follow us and keep up to date by following our social medias</p.foot><br>
+
+                    <a href="https://twitter.com/">
+                        <img id = "icons" src="images/twitter.png" alt="Twitter">
+                    </a>
+
+                    <a href="https://facebook.com/">
+                        <img id = "icons" src="images/facebook.png" alt="Facebook">
+                    </a>
+
+                    <a href="https://instagram.com/">
+                        <img id = "icons" src="images/instagram.png" alt="Instagram"> 
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+        <!-- Footer -->
+
+        <!-- Scripts -->
+        <script>
+            //Save group number
+            var groupNumber = document.getElementById("startButton");
+
+            groupNumber.addEventListener("click",function(){
+
+                if(document.getElementById("groupNumber").value!='')
+                    var passGroup = document.getElementById("groupNumber").value;
+                else
+                    var passGroup = '1';
+                localStorage.setItem("passGroup",passGroup);
+
+                window.location = "html/quick-split.html";
+                window.open("html/quick-split.html","_self");
+            });
+        </script>
+
+    </body>
+</html>
