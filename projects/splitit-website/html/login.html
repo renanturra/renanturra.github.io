@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Title -->
+        <title>Split.It</title>
+
+        <!-- Metas -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="../css/bootstrap.css" rel="stylesheet">
+        <link href="../css/main.css" rel="stylesheet">
+
+        <script src="../js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../js/scripts.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js"></script>
+
+
+        <!-- Styles -->
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Baloo+Bhaijaan|Quicksand');
+        </style>   
+    </head>
+
+    <body>
+        <!-- Header -->
+        <div id="header" class="header">
+
+            <!-- Left Side -->
+
+            <div id="leftHeader" class="leftHeader">
+                <a href="login.html">
+                    <h1>Split.It</h1>
+                </a>
+            </div>
+            <!-- /Left Side -->
+
+            <!-- Right Side -->
+            <div id="rightHeader" class="rightHeader">
+                <form class="form-inline">
+                    <div class="container-fluid">
+                        <div class="userHeader">
+                            <div class="input-group">
+
+                                <!-- Drop down menu -->
+                                <p style="float:left">Welcome, user
+                                <div class="dropdown" style="float:right; padding-left: 10px">
+                                    <button class="dropbtn"><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+                                    <div class="dropdown-content">
+                                        <a onclick='window.open("login.html","_self")'>Split</a>
+                                        <a onclick='window.open("settings.html","_self")'>Account Settings</a>
+                                        <a onclick='window.open("../index.html","_self")'>Log Out
+                                            <span id="logoutButton" class="glyphicon glyphicon-log-out" style="color: black;font-size: 13px"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- /Right Side -->
+        </div>
+        <!-- /Header -->
+
+        <!-- Body -->
+        <div class="container-fluid">
+            <br>
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" style="font-size: 20px; color: #FF8F3D; padding-top: 10px; text-align: left">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#split">Split</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#random">Random</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#summary">Summary</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div id="mainUserLeft" class="mainUserLeft">
+                <div class="tab-content">
+                    <!-- Split Tab -->
+                    <div id="split" class="container-fluid tab-pane active"><br>
+
+                        <div class="container-fluid">
+                            <!-- Splitting Section -->
+                            <div class="col-lg">
+                                <p>Splitting the bill in:
+                                    <input id="groupNum" type="number" name="group" oninput="validity.valid||(value='');" min="1" value="1" step="1" style="width:30%" placeholder="1" >
+                            </div>
+                            <br><br><br>
+
+                            <!-- Amount Section -->
+                            <p>Amount: </p>
+                            <p>$<input id="amount" type="text" placeholder="0.00"></p>
+
+                            <!-- Button Group -->
+                            <div id="buttonGroup" class="btn-group-lg" role="group" style="text-align: inherit">
+                                <!-- Percentual Button -->
+                                <button id="percentual" type="button" class="btn btn-secondary" onclick="validateAmount()">Percentual</button>
+
+                                <!-- Even Button -->
+                                <button id="even" type="button" class="btn btn-secondary" onclick="validateAmount()">Even</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Random Tab -->
+                    <div id="random" class="container-fluid tab-pane fade"><br>
+                        <div id="mainUserLeft" class="mainUserLeft">
+                            <div class="container-fluid">
+                                <div class="wheel"></div>
+                                <!--<button type="button" class="button button-primary btn-lg" class="custom-modal" data-toggle="modal" data-target="#myModal" >Randomly Select!</button>    -->
+                                <button type="button" class="btn button-primary btn-lg custom-modal">Randomly Select!</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" role="dialog">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h6 style="font-size: 50px;" class="modal-title">The person who pays is</h6>
+                                </div>
+                                <div class="modal-body">
+                                    <p> </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-lg" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <!-- Summary Tab -->
+                    <div id="summary" class="container-fluid tab-pane fade"><br>
+                        <p>This would show the group members, the amount for each and who is going to pay.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="mainUserRight" class="mainUserRight">
+                <div class="container-fluid">
+                    <div class="dropdown" style=" padding-top:10px">
+                        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">Select Group
+                            <span class="caret"></span></button>
+                        <ul id="groupList" class="dropdown-content" style="list-style-type:none">
+                        </ul>
+                    </div>
+
+                    <br><br>
+                    <div id="group1" class="navcontent">
+                        <p class="group1login" ></p>
+                    </div>
+                    <div id="group2" class="navcontent">
+                        <p class="group2login" ></p>
+                    </div>
+                    <div id="group3" class="navcontent">
+                        <p class="group3login" ></p>
+                    </div>
+
+                    <div class="input-group" style="width:50%">
+                        <input id="addFriend" type="text" class="form-control" placeholder="Add Friend" aria-label="" aria-describedby="basic-addon1" style="float:left">
+                        <span class="input-group-btn">
+                            <button type="button" class="btn addButton"><span class="glyphicon glyphicon-plus"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Body -->
+
+
+        <!-- Footer -->
+        <div id="footer" class="footer">
+            <hr>
+            <div class = "footrow">
+                <div class ="footcolumn">
+                    <p.foot>Questions, concerns or suggestions?</p.foot> <br>
+                    <p.foot>Contact us:
+                        <a href="mailto:split.it@gmail.com">split.it@gmail.com</a>
+                    </p.foot>
+                </div>
+                <div class ="footcolumn">
+                    <p.foot>Follow us and keep up to date by following our social medias</p.foot><br>
+
+                    <a href="https://twitter.com/">
+                        <img id = "icons" src="../images/twitter.png" alt="Twitter">
+                    </a>
+
+                    <a href="https://facebook.com/">
+                        <img id = "icons" src="../images/facebook.png" alt="Facebook">
+                    </a>
+
+                    <a href="https://instagram.com/">
+                        <img id = "icons" src="../images/instagram.png" alt="Instagram"> 
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+        <!-- Footer -->
+
+
+        <script>
+            //Validate entered amount
+            function validateAmount() {
+                var amountValue = document.getElementById("amount").value;
+                var valid = true;
+
+                if (amountValue == "" || isNaN(amountValue)) {
+                    var text = "Invalid Input";
+                    document.getElementById("amount").value = "";
+                    document.getElementById("amount").placeholder = text;
+                    valid = false;
+                }
+
+                return valid;
+            }
+        </script>
+
+        <script>
+            //Get total per person
+
+
+            $("#even").click(function(){
+                if(validateAmount()){
+                    
+                    if(document.getElementById("groupNum").value!='')
+                        var groupSize = parseFloat(document.getElementById("groupNum").value);
+                    else
+                        var groupSize = 1.0;
+                    
+                    var amountValue = parseFloat(document.getElementById("amount").value);
+
+                    even = parseFloat(amountValue/groupSize).toFixed(2);
+                    localStorage.setItem("evenDiv",even);
+                    localStorage.setItem("totalPass",amountValue);
+
+                    <script>
+
+                        var newMember = localStorage.getItem("newMember");
+                    document.getElementById("passedMember").value = newMember;
+
+                    $("#newMemberButton").click(function(){
+                        alert(document.getElementById("passedMember").value);
+                        addMember(document.getElementById("passedMember").value);
+
+                    });
+
+                    //Validate entered amount
+                    function validateAmount() {
+                        var amountValue = document.getElementById("amount").value;
+                        var valid = true;
+
+                        if (amountValue == "" || isNaN(amountValue)) {
+                            var text = "Invalid Input";
+                            document.getElementById("amount").value = "";
+                            document.getElementById("amount").placeholder = text;
+                            valid = false;
+                        }
+
+                        return valid;
+                    }
+        </script>
+
+        <script>
+            //Get total per person
+            $("#even").click(function(){
+                if(validateAmount()){
+                    var groupSize = parseFloat(document.getElementById("groupNum").value);
+                    var amountValue = parseFloat(document.getElementById("amount").value);
+
+                    even = parseFloat(amountValue/groupSize).toFixed(2);
+                    localStorage.setItem("evenDiv",even);
+                    localStorage.setItem("totalPass",amountValue);
+
+                    window.location = "login-split-even.html";
+                    window.open("login-split-even.html","_self");
+                    window.location = "login-even.html";
+                    window.open("login-even.html","_self");
+                }
+            });
+        </script>
+        
+        <!--Random Page -->
+
+        <script>
+            function doRandom() {
+                //change array to the list of people in the group
+                var array = ["Jake","Rosa","Amy", "Terry", "Charles"];
+                var random = (array[Math.floor(Math.random() * array.length)]);
+                return random;
+            }
+        </script>
+
+        <script>
+            $(function(){
+                $('.custom-modal').click(function(e){
+                    e.preventDefault();
+                    var mymodal = $('#myModal');
+                    mymodal.find('.modal-body').text(doRandom());
+                    mymodal.modal('show');
+                });
+            })
+
+        </script>
+
+    </body>
+</html>

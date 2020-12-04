@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Title -->
+        <title>Split.It</title>
+
+        <!-- Metas -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link href="../css/bootstrap.css" rel="stylesheet">
+        <link href="../css/main.css" rel="stylesheet">
+
+        <script src="../js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../js/scripts.js"></script>
+        <script src="../js/bootstrap.js"></script>
+
+
+        <!-- Styles -->
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Baloo+Bhaijaan|Quicksand');
+        </style>   
+    </head>
+
+    <body>
+        <!-- Header -->
+        <div id="header" class="header">
+
+            <!-- Left Side -->
+
+            <div id="leftHeader" class="leftHeader">
+                <a href="../index.html">
+                    <h1>Split.It</h1>
+                </a>
+            </div>
+
+            <!-- /Left Side -->
+
+            <!-- Right Side -->
+            <div id="rightHeader" class="rightHeader">
+                <form class="form-inline">
+                    <div class="container-fluid">
+                        <p>Login</p>
+
+                        <!-- Email Field-->
+                        <input id="loginEmail" class="form-control" type="email" placeholder="Email"> 
+
+                        <!-- Password Field-->
+                        <input id="loginPassword" class="form-control" type="password" placeholder="Password">
+
+                        <!-- Sign In Button-->
+                        <a href="#">
+                            <span id="loginButton" class="glyphicon glyphicon-log-in" style="color: white;font-size: 20px"></span>
+                        </a>
+                    </div>
+                </form>            
+            </div>
+            <!-- /Right Side -->
+
+        </div>
+        <!-- /Header -->
+
+        <!-- Body -->
+        <div id="body" class="body">
+
+            <!-- Left Side -->
+            <div id="mainLeftSide" class="mainLeftSide">
+                <div class="container-fluid">
+                    <!-- Splitting Section -->
+                    <div class="col-lg">
+                        <p>Splitting the bill in:
+                            <input id="passedGroup" type="number" name="group" min="1" step="1" style="width:30%" oninput="validity.valid||(value='');" onchange="updateGroup(this.value)" >
+                    </div>
+                    <br><br><br>
+
+                    <!-- Amount Section -->
+                    <p>Amount: </p>
+                    <p>$<input id="amount" type="text" placeholder="0.00"></p>
+
+                    <!-- Button Group -->
+                    <div id="buttonGroup" class="btn-group-lg" role="group" style="text-align: inherit">
+                        <!-- Percentual Button -->
+                        <button id="percentual" type="button" class="btn btn-secondary" onclick="validateAmount()">Percentual</button>
+
+                        <!-- Even Button -->
+                        <button id="even" type="button" class="btn btn-secondary" onclick="validateAmount()">Even</button>
+
+                        <!-- Random Button -->
+                        <button id="random" type="button" class="btn btn-secondary" onclick="validateAmount()">Random</button>
+                    </div>
+                    <!-- /Button Group -->
+
+                </div>
+            </div>
+            <!-- /Left Side -->
+
+            <!-- Right Side -->
+            <div id="mainRightSide" class="mainRightSide">
+                <form class="form-horizontal">
+                    <div class="container-fluid">
+                        <p>New User</p>
+
+                        <!-- Email Field-->
+                        <div class="col-sm">
+                            <label class="control-label col-sm-2" for="email"></label>
+                            <input type="email" class="form-control" id="email" placeholder="Email">
+                        </div>
+
+                        <!-- Password Field-->
+                        <div class="col-sm">
+                            <label class="control-label col-sm-2" for="pwd"></label>
+                            <input type="password" class="form-control" id="pwd" placeholder="Password">
+                        </div>
+
+                        <!-- Sign Up Button-->
+                        <button type="button" class="btn btn-secondary">Sign Up</button>
+                    </div>
+                </form>
+            </div>
+            <!-- /Right Side -->
+        </div>
+        <!-- /Body -->
+
+        <!-- Footer -->
+        <div id="footer" class="footer">
+            <hr>
+            <div class = "footrow">
+                <div class ="footcolumn">
+                    <p.foot>Questions, concerns or suggestions?</p.foot> <br>
+                    <p.foot>Contact us:
+                        <a href="mailto:split.it@gmail.com">split.it@gmail.com</a>
+                    </p.foot>
+                </div>
+                <div class ="footcolumn">
+                    <p.foot>Follow us and keep up to date by following our social medias</p.foot><br>
+
+                    <a href="https://twitter.com/">
+                        <img id = "icons" src="../images/twitter.png" alt="Twitter">
+                    </a>
+
+                    <a href="https://facebook.com/">
+                        <img id = "icons" src="../images/facebook.png" alt="Facebook">
+                    </a>
+
+                    <a href="https://instagram.com/">
+                        <img id = "icons" src="../images/instagram.png" alt="Instagram"> 
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+        <!-- Footer -->
+
+        <!-- Scripts -->
+        <script>
+            //Get the number of the group from last page
+            $(document).ready(function() {
+                var getGroup = localStorage.getItem("passGroup");
+                document.getElementById("passedGroup").value = getGroup;
+            });
+            
+        </script>
+        
+        <script>
+            function updateGroup(vgroup){
+                localStorage.setItem("passGroup",vgroup);
+                document.getElementById("passedGroup").value = vgroup;                
+            }
+        </script>
+        <script>
+            //Validate entered amount
+            function validateAmount() {
+                var amountValue = document.getElementById("amount").value;
+                var valid = true;
+
+                if (amountValue == "" || isNaN(amountValue)) {
+                    var text = "Invalid Input";
+                    document.getElementById("amount").value = "";
+                    document.getElementById("amount").placeholder = text;
+                    valid = false;
+                }
+
+                return valid;
+            }
+        </script>
+
+        <script>
+            //Get total per person
+            
+
+            $("#even").click(function(){
+                if(validateAmount()){
+                    var groupSize = parseFloat(localStorage.getItem("passGroup"));
+                    var amountValue = parseFloat(document.getElementById("amount").value);
+
+                    var even = parseFloat(amountValue/groupSize).toFixed(2);
+                    localStorage.setItem("evenDiv",even);
+                    localStorage.setItem("totalPass",amountValue);
+
+                    window.location = "quick-split-even.html";
+                    window.open("quick-split-even.html","_self");
+                }
+            });
+
+            $("#percentual").click(function(){
+                if(validateAmount()){
+                    var amountValue = parseFloat(document.getElementById("amount").value);
+
+                    localStorage.setItem("totalPass",amountValue);
+
+                    window.location = "quick-split-percentual.html";
+                    window.open("quick-split-percentual.html","_self");
+                }
+            });
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,332 @@
+*{
+    margin:0;padding:0;
+    box-sizing: border-box;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover, a:active{
+    color: black;
+}
+
+/* Body Style*/
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: white;
+    padding-top: 100px;
+    color: white;
+}
+
+/* h1 */
+h1{
+    font-family: 'Baloo Bhaijaan', cursive;
+    font-size: 65px;
+}
+
+/* p */
+p{
+    font-size: 25px;
+}
+
+/* Buttons */
+button{
+    background-color:#FF8F3D;
+    background-position: center;
+    color: white;
+}
+
+input{
+    color: black;
+}
+
+input[type=number]{
+    text-align: center;
+    width: 15%;
+    margin: 50px 50px;
+    padding: 2px 2px;
+    font-size: 50px;
+}
+
+select{
+    width: 500px;
+}
+
+.addButton{
+    color:white;
+    outline: inherit;
+    background-color: #FF8F3D;
+    float: right;
+}
+
+/* Header*/
+.header{
+    background-color: #FF8F3D;
+    width: 100%;
+    position: fixed; /* Set the header to fixed position */
+    top: 0;          /* Position the header at the top of the page */
+    color: white;
+}
+
+.leftHeader{
+    padding: 10px;
+    text-align:left;
+    float: left;
+    width: 60%;
+}
+
+.rightHeader{
+    padding: 10px;
+    padding-left: 50px;
+    text-align: left;
+    float: right;
+    width: 40%;
+}
+
+.userHeader{
+    padding: 10px;
+    padding-top: 30px ;
+    text-align: right;
+}
+
+/*-------*/
+
+
+/* Main Page*/
+.mainLeftSide{
+    background: url(../images/main.png) no-repeat center top;
+    text-align: center;
+    padding: 100px;
+    padding-bottom: 50px;
+    width: 60%;
+    min-height: 800px;
+    float: left;
+
+}
+
+.mainRightSide{
+    text-align: left;
+    padding: 50px;
+    padding-top: 200px;
+    font-size: 30px;
+    width: 40%;
+    float: right;
+    color: black;  
+}
+
+.mainUserLeft{
+    padding-top: 10px; 
+    color: #FF8F3D;
+    float: left;
+    text-align: center;
+    width: 60%;
+}
+
+.mainUserRight{
+    padding-top: 10px; 
+    color: #FF8F3D;
+    float: right;
+    text-align: left;
+    width: 40%;
+}
+
+
+.mainSettingsLeft{
+    color: #FF8F3D;
+    text-align: left;
+    float: left;
+    width: 20%;
+    border-right: 1px solid gray;
+    height: 500px;
+    padding-right: 20px;
+}
+
+.mainSettingsRight{
+    color: #FF8F3D;
+    text-align: left;
+    float: right;
+    width: 80%;
+    padding-left: 20px;
+}
+
+
+
+/*Can be used for a more responsive page, we would need to fix where the sign up button appears though
+@media screen and (max-width: 600px) {
+.mainLeftSide, .mainRightSide {   
+width: 100%;
+padding: 0;
+}
+}*/
+
+
+
+
+.percentDiv{
+    padding-top: 0px; 
+    padding-left: 0px; 
+    padding-right: 0px; 
+}
+
+.percentLeft{
+    float: left;
+    text-align: left;
+    width: 50%;
+}
+
+.percentRight{
+    float: right;
+    text-align: right;
+    width: 50%;
+}
+
+
+.wheel{
+    background: url(../images/wheel.png) no-repeat center top;
+    background-size: 250px;
+    padding: 100px;
+    min-height: 250px;
+}
+
+
+
+/* Side Bar */
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    overflow-x: hidden; /* Disable horizontal scroll */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+    background-color: #FF8F3D;
+}
+
+.selectFriends{
+    font-size: 20px;
+}
+
+/* Style page content */
+.main {
+    margin-left: 160px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+/* Drop Down Button */
+
+.dropbtn {
+    background-color: #FF8F3D;
+    color: white;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+}
+
+.dropdown-content a {
+    color: black;
+    font-size: 14px;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    color: #FF8F3D;
+    background-color: #f2f2f2;
+
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+    cursor: pointer;
+}
+.dropdown:hover .dropbtn {
+    color: #FF8F3D;
+    background-color: white;
+
+}
+
+hr {
+    display: block;
+    position: relative;
+    margin-top: 0px;
+    width: 100%;
+    border: 5px solid #FF8F3D;
+}
+
+/* Footer*/
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    color: black;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    padding-bottom: 20px;
+}
+
+.footrow {
+    display: flex;
+}
+
+.footcolumn {
+    flex: 50%;
+}
+
+#icons
+{
+    width: 20px;
+    height: 20px;
+}
+
+/* Modal */
+                    
+.modal-dialog{
+    position: relative;
+    display: table;
+    overflow-y: auto;    
+    overflow-x: auto;
+    width: 35%;
+    min-width: 300px;   
+    font-size: 400%;
+}
+
