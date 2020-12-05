@@ -1927,14 +1927,14 @@ input::-moz-focus-inner {
 
 .intro-pic {
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: top left;
   background-image: url(../images/no-bkg.png);
   background-size: cover;
   position: absolute;
   top: 20%;
   right: 0;
   bottom: 0;
-  left: 50%;
+  left: 30%;
 }
 
 .intro-pic::before {
@@ -2073,8 +2073,7 @@ input::-moz-focus-inner {
   }
 
   .intro-pic {
-    top: 12%;
-    left: 40%;
+    left: 20%;
   }
 
   .intro-pic::before {
@@ -2102,7 +2101,7 @@ input::-moz-focus-inner {
   }
 
   .intro-pic {
-    left: 30%;
+    left: 10%;
   }
 
   .intro-grid {
@@ -2121,7 +2120,7 @@ input::-moz-focus-inner {
   }
 
   .intro-pic {
-    left: 20%;
+    left: 10%;
   }
 
   .intro-grid {
