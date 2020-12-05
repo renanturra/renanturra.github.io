@@ -157,7 +157,7 @@ h2, .h2 {
 }
 
 h3, .h3 {
-  font-size: 2.4rem;
+  font-size: 3rem;
   line-height: 1.1667;
 }
 
@@ -208,14 +208,14 @@ b {
 
 em,
 i {
-  font-family: "Lora", serif;
+  font-family: "Roboto", sans-serif;
   font-style: italic;
 }
 
 strong,
 b {
-  font-family: "Lora", serif;
-  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
 }
 
 small {
@@ -1506,9 +1506,11 @@ input::-moz-focus-inner {
 }
 
 .item-title {
-  font-family: "Roboto", sans-serif;
-  font-size: 3.6rem;
-  font-weight: 400;
+
+  font-weight: bold;
+  font-family: "Lora", serif;
+  color: #02041e;
+
   line-height: 1.222;
   margin-top: 0;
   color: #02041e;
@@ -2732,7 +2734,7 @@ input::-moz-focus-inner {
  * ------------------------------------------------------------------- */
 .s-works {
   padding-top: 19.2rem;
-  padding-bottom: 16rem;
+  padding-bottom: 40%;
   background-color: #ffffff;
 }
 
@@ -2742,7 +2744,6 @@ input::-moz-focus-inner {
   margin-top: 11.2rem;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 25%;
 }
 
 .grid-sizer,
@@ -2757,8 +2758,7 @@ input::-moz-focus-inner {
   margin-right: auto;
   margin-bottom: 60px;
   border: 20px solid white;
-  padding: 20px;
-  
+
 }
 
 .item-folio {
@@ -2947,8 +2947,9 @@ input::-moz-focus-inner {
   }
 
   .masonry-brick {
-    float: none;
-    margin-bottom: 60px;
+    margin-bottom: 25%;
+    width: 33%;
+    padding: initial;
   }
 
   .item-folio {
@@ -2966,25 +2967,15 @@ input::-moz-focus-inner {
     height: 6.4rem;
   }
 
-  .item-folio__title,
+  .item-folio__title {
+    font-size: 1.5rem;
+  }
+
   .item-folio__cat {
-    font-size: 1.7rem;
+    font-size: 1.3rem;
   }
 
 }
-
-@media screen and (max-width:700px) {
-  .masonry-wrap {
-    width: auto;
-    padding-left: 25px;
-    padding-right: 25px;
-  }
-
-  .masonry-brick {
-    padding: 0 10px;
-    margin-bottom: 44px;
-    width: 45%;
-  }
 
 @media screen and (max-width:600px) {
   .masonry-wrap {
@@ -2994,9 +2985,9 @@ input::-moz-focus-inner {
   }
 
   .masonry-brick {
-    padding: 0 10px;
-    margin-bottom: 44px;
-    width: 60%;
+    float: none;
+    margin-bottom: 30%;
+    width: 80%;
   }
 
   .item-folio__thumb .thumb-link::after {
@@ -3018,8 +3009,8 @@ input::-moz-focus-inner {
 
 @media screen and (max-width:500px) {
   .masonry-brick {
-    margin-bottom: 3.6rem;
-    width: 70%;
+    margin-bottom: 20%;
+    width: 80%;
   }
 
 }
@@ -3027,7 +3018,7 @@ input::-moz-focus-inner {
 @media screen and (max-width:400px) {
   .masonry-brick {
     padding: 0;
-    margin-bottom: 3.2rem;
+    margin-bottom: 20%;
     width: 80%;
   }
 
@@ -3559,6 +3550,19 @@ footer a:focus {
   position: absolute;
   left: calc(30px + 15px);
   top: -165px;
+}
+
+.ps-title > a{
+  font-size: 3rem;
+  color: white;
+}
+
+.see-site > a{
+  font-size: 2.4rem;
+}
+
+.see-site > a:hover{
+  color: white;
 }
 
 /* ------------------------------------------------------------------- 
